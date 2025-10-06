@@ -1,10 +1,8 @@
 version: 3
 projects:
-  - name: customer-x-infra-live
-    dir: .
-    workflow: terragrunt
-workflows:
-  terragrunt:
-    plan:
-      steps:
-        - run: terragrunt plan --terragrunt-include-dir azure/dev/eastus/rg1/xdr-content --terragrunt-include-dir azure/dev/eastus/rg1/services
+  - name: xdr-content
+    dir: azure/dev/eastus/rg1/xdr-content/module
+    workflow: default
+    autoplan:
+      when_modified: ["*.tf", "*.tfvars", "*.tf.json"]
+      enabled: true
