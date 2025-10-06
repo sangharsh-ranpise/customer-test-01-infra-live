@@ -1,4 +1,0 @@
-repos:
-  - id: /.*/                # applies to all repos, or replace with a specific repo
-    allowed_overrides:
-      - workflow

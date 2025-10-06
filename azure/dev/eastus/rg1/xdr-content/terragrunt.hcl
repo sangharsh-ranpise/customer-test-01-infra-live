@@ -1,8 +1,3 @@
-# terragrunt.hcl
 terraform {
-  source = "./module"
-}
-
-inputs = {
-  my_number = 42
+  source = "../../../../../customer-x-infra-modules/modules/common"
 }
