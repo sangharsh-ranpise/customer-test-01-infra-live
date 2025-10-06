@@ -28,7 +28,7 @@ projects:
     # workflow: terragrunt
   - name: atlantis-test
     dir: atlantis-test     # NEW test folder
-    workflow: default      # Use default workflow for simple Terraform
+    # workflow: default      # Use default workflow for simple Terraform
 workflows:
   terragrunt:
     plan:
