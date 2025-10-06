@@ -1,6 +1,6 @@
 # server.yaml
 repos:
-  - id: github.com/sangharsh-ranpise/customer-test-01-infra-live
+  - id: github.com/sangharsh-ranpise/customer-test-01-infra-live(.git)?
     apply_requirements: [approved, mergeable]
     workflow: terragrunt
     allow_custom_workflows: true
