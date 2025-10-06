@@ -1,14 +1,4 @@
 repos:
-  - id: /.*/
-    apply_requirements: [approved, mergeable]
-    allowed_overrides: [workflow]
-
-workflows:
-  terragrunt:
-    plan:
-      steps:
-        - run: terragrunt init
-        - run: terragrunt plan
-    apply:
-      steps:
-        - run: terragrunt apply --auto-approve
+  - id: /.*/                # applies to all repos, or replace with a specific repo
+    allowed_overrides:
+      - workflow
