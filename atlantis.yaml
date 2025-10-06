@@ -1,0 +1,10 @@
+version: 3
+projects:
+  - name: customer-x-infra-live
+    dir: .
+    workflow: terragrunt
+workflows:
+  terragrunt:
+    plan:
+      steps:
+        - run: terragrunt plan --terragrunt-include-dir azure/dev/eastus/rg1/xdr-content --terragrunt-include-dir azure/dev/eastus/rg1/services
