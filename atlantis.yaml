@@ -25,7 +25,7 @@ version: 3
 projects:
   - name: customer-x-infra-live
     dir: .
-    workflow: terragrunt
+    # workflow: terragrunt
   - name: atlantis-test
     dir: atlantis-test     # NEW test folder
     workflow: default      # Use default workflow for simple Terraform
