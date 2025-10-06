@@ -1,0 +1,9 @@
+FROM runatlantis/atlantis:latest
+
+# Install Terragrunt
+USER root
+RUN apk add --no-cache curl
+RUN curl -L https://github.com/gruntwork-io/terragrunt/releases/download/v0.63.2/terragrunt_linux_amd64 -o /usr/local/bin/terragrunt && \
+    chmod +x /usr/local/bin/terragrunt
+
+USER atlantis
