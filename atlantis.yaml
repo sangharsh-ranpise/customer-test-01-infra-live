@@ -40,9 +40,9 @@ version: 3
 projects:
   - name: xdr-content
     dir: azure/dev/eastus/rg1/xdr-content
-    workflow: terragrunt
+    # workflow: terragrunt
 workflows:
-  terragrunt:
+  default:
     plan:
       steps:
         - run: terragrunt init
