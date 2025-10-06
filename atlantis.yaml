@@ -36,17 +36,24 @@
 #         - run: terragrunt plan --terragrunt-include-dir azure/dev/eastus/rg1/xdr-content --terragrunt-include-dir azure/dev/eastus/rg1/services
 
 # atlantis.yaml
+# version: 3
+# projects:
+#   - name: xdr-content
+#     dir: azure/dev/eastus/rg1/xdr-content
+#     # workflow: terragrunt
+# workflows:
+#   default:
+#     plan:
+#       steps:
+#         - run: terragrunt init
+#         - run: terragrunt plan
+#     # apply:
+#     #   steps:
+#     #     - run: terragrunt apply --auto-approve
+
+# customer-test-01-infra-live/atlantis.yaml
 version: 3
 projects:
   - name: xdr-content
     dir: azure/dev/eastus/rg1/xdr-content
-    # workflow: terragrunt
-workflows:
-  default:
-    plan:
-      steps:
-        - run: terragrunt init
-        - run: terragrunt plan
-    # apply:
-    #   steps:
-    #     - run: terragrunt apply --auto-approve
+    workflow: terragrunt

@@ -1,0 +1,15 @@
+# server.yaml
+repos:
+  - id: github.com/sangharsh-ranpise/customer-test-01-infra-live
+    allow_custom_workflows: true
+
+# Optional: default workflows
+workflows:
+  terragrunt:
+    plan:
+      steps:
+        - run: terragrunt init
+        - run: terragrunt plan
+    apply:
+      steps:
+        - run: terragrunt apply --auto-approve
