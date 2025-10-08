@@ -1,7 +1,7 @@
 # main.tf
 variable "my_number" {
   description = "Some number"
-  default     = 423
+  default     = 424
   type = number
 }
 
